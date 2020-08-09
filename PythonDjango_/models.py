@@ -17,7 +17,15 @@ class Entry(models.Model):
         verbose_name_plural = 'entries'
     
     def __str__(self):
-        return str(self.text)[:50] + "..."
+
+        if (len(str(self.text)) > 50):
+            return str(self.text)[:50] + "..."
+        else:
+            return str(self.text)[:50] + "este textfield tiene menos de 50 letras"
+
+        
         # Return a string representation of the mdodel.
+
+
 
 # Create your models here.
