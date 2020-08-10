@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # From My app
     'PythonDjango_',
+    # this is another model created by Django documentation
+    'locations.apps.LocationsConfig',
 ]
 
 MIDDLEWARE = [
