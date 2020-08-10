@@ -1,0 +1,11 @@
+{% if lastest_question_list %}
+    <ul>
+        {% for question in lastest_question_list %}
+        <i><a href="/locations/{{question.id}}/">{{ question.question_text}}
+            </a>
+        </i>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No locations are avaliable.</p>
+{% endif %}
