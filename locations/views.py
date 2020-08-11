@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from django.template import loader
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Question
 
@@ -22,16 +22,19 @@ def home_page(request):
 
 def details_page(request, question_id_):
 
+    question = get_object_or_404(Question, pk=question_id_)
+    return render(request, 'locations/detail.html', {'question':question})
 
+    """
     try:
         question = Question.objects.get(pk = question_id_)
 
     except Question.DoesNotExist:
         raise Http404("Question doesn't exist")
+    """
+    
 
-
-
-    return render(request, 'polls/detail.html', {'question': question})
+    #return render(request, 'polls/detail.html', {'question': question})
 
 def results_page(request, question_id_):
 
