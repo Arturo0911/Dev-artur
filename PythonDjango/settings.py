@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'PythonDjango_',
     # this is another model created by Django documentation
     'locations.apps.LocationsConfig',
+    'ecommerce',
 ]
 
 MIDDLEWARE = [
