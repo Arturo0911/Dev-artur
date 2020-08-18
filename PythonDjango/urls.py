@@ -18,11 +18,14 @@ from django.urls import path, include
 #from PythonDjango.views import Saludo
 #from PythonDjango_.views import index
 #from . import views
-
+from ecommerce import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('PythonDjango_.urls')),
     path('home/', include('locations.urls')),
+    path('product', include('ecommerce.urls'),)
+    #path('products/', views.Search_products),
+    #path('products/', views.search),
     #path('', index, name= 'index'), # to declare the index page it's not neccessary use '/', only single quotes to indicate like this ''
 ]
     
